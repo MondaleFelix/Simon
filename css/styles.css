@@ -1,0 +1,72 @@
+#box {
+  width: 600px;
+  height:600px;
+  margin:auto;
+  margin-bottom: 50px;
+  z-index: 1;
+
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Baloo Paaji', cursive;
+  font-size: 50px;
+  margin: auto;
+}
+
+
+h3 {
+  float: right;
+  font-family: 'Baloo Paaji', cursive;
+  font-size: 25px;
+  padding-right: 25px;
+}
+
+#blackCircle {
+  width: 600px;
+  height: 600px;
+  border-radius: 500px;
+  background-color: black;
+  z-index: 2;
+  position: absolute;
+}
+
+#middleButton{
+  background-color: black;
+  height: 300px;
+  width: 300px;
+  border-radius: 1000%;
+  margin-left: 150px;
+  z-index: 3;
+  position: absolute;
+  font-family: 'Baloo Paaji', cursive;
+  margin-top: 150px;
+}
+
+#simon{
+  width:100px ;
+  height:100px;
+  background: none;
+  color: white;
+  border:none;
+  border-radius: 100px;
+  font-size: 80px;
+  font-family: 'Baloo Paaji', cursive;
+  margin-top: 70px;
+  margin-left: 30px;
+
+}
+
+#redButton {
+  float: right;
+ margin-top: 5px;
+}
+
+#yellowButton{
+  float: left;
+}
+
+#redButton, #yellowButton, #greenButton, #blueButton {
+  cursor:pointer;
+
+}
