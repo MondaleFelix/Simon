@@ -4,12 +4,15 @@ var score;
 var difficulty;
 var guesses;
 // Sound Variables
-var sounds = [
-  {name:"Blue", audio},
-  {},
-  {},
-  {}
+var colorSounds = [
+  "sounds/greenSound.wav",
+  "sounds/redSound.wav",
+  "sounds/blueSound.wav",
+  "sounds/yellowSound.wav"
+
 ];
+
+var soundPlayer = new Audio();
 
 var blueSound = new Audio("sounds/blueSound.wav");
 var yellowSound = new Audio("sounds/yellowSound.wav");
@@ -31,7 +34,7 @@ function render(){
 
 var init = function(){
   score = 0;
-  difficulty = 1;
+  difficulty = 300;
   setCode();
   console.log(code);
   render();
@@ -64,7 +67,8 @@ function playCode() {
     var curSrc = $("[data-color-id=" + code[codeCount] + "]").attr('src');
     $("[data-color-id=" + code[codeCount] + "]").attr('src', curSrc.replace('Button', 'Click'));
     // play audio here
-
+    soundPlayer.src = colorSounds[code[codeCount]];
+    soundPlayer.play();
     setTimeout(function() {
       resetDisplay();
     }, 500);
@@ -78,9 +82,10 @@ function resetDisplay() {
   $("#blueButton").attr("src", "images/blueButton.png");
 }
 
-//handleGuess(colorIdx) {
+
+//handleGuess(colorIdx){
   //guesses.push(colorIdx);
-  // check if wrong or correct
+ // }  // check if wrong or correct
 
 
 
