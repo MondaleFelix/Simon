@@ -40,7 +40,7 @@ var init = function(){
   console.log(code);
   render();
 };
-
+// pushes into code array
 function setCode(){
   code = [];
   for (var i =0; i<difficulty; i++ ){
@@ -50,15 +50,24 @@ function setCode(){
 
 var codeCount;
 var displayTimer;
+
+// plays buttons
 function displayCode(){
   // loop thru code array
   codeCount = 0;
-  playCode();
-  codeCount++;
+  console.log(code)
   displayTimer = setInterval(function() {
     playCode();
     codeCount++;
   }, 1000);
+  for (var i = 0; i < code.length; i++) {
+    console.log(code[codeCount])
+    displayTimer;
+  //   displayTimer = setInterval(function() {
+  //   playCode();
+  //   codeCount++;
+  // }, 1000);
+}
 }
 
 function playCode() {
@@ -66,6 +75,7 @@ function playCode() {
     clearInterval(displayTimer);
   } else {
     var curSrc = $("[data-color-id=" + code[codeCount] + "]").attr('src');
+    console.log(code[codeCount])
     $("[data-color-id=" + code[codeCount] + "]").attr('src', curSrc.replace('Button', 'Click'));
     // play audio here
     soundPlayer.src = colorSounds[code[codeCount]];
@@ -103,12 +113,20 @@ function resetDisplay() {
  // check if wrong or correct
 
 function checkWin(){
+  console.log('in checkWin')
   if (guesses.toString() === code.toString()) {
     score = (score + (1 * difficulty)) ;
     render();
-  } else
+    for (var i =0; i<difficulty; i++ ){
+      code.push(Math.floor(Math.random() * 4));
+
+    }
+    console.log(code)
+    displayCode();
+    guesses = [];
+  }
     //alert("you fuckn lose");
-;}
+}
 
 
 $("#middleButton").click(function(evt){
@@ -199,7 +217,7 @@ $("#blackCircle").on('click', ".simon-button", function(){
 
 // This increases the difficulty and limits it to 10
 $("#plus").click(function(click) {
-  if (difficulty < 10){
+  if (difficulty < 9){
     difficulty++;
     setCode();
     render();
