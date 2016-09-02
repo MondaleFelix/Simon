@@ -123,8 +123,8 @@ $("#middleButton").click(function(evt){
 $("#blackCircle").on('click', ".simon-button", function(evt){
   var colorIdx = parseInt($(this).attr('data-color-id'));
   if (code[guesses.length] !== colorIdx) {
-    $("#lose").show();
     horn.play();
+    $("#lose").show();
   } else {
     guesses.push(colorIdx);
     audios[colorIdx].play();

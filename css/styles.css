@@ -80,7 +80,7 @@ h3 {
   position: fixed;
 }
 
-#lit {
+#sideScore {
   width: 200px;
   height: 50px;
 
@@ -100,7 +100,7 @@ h3 {
   margin-top: 30px;
 }
 
-#lit2 {
+#sideDifficulty {
   width: 200px;
   height: 50px;
   font-size: 45px;
