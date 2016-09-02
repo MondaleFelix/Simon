@@ -52,7 +52,7 @@ h3 {
   border-radius: 100px;
   font-size: 80px;
   font-family: 'Baloo Paaji', cursive;
-  margin-top: 70px;
+  margin-top: 78px;
   margin-left: 30px;
 
 }
@@ -118,21 +118,46 @@ h3 {
   text-align: center;
   font-family: 'Baloo Paaji', cursive;
   position: absolute;
-z-index: 0;
+  z-index: 0;
 
 }
 
 #minus {
-float: left;
-position: absolute;
-z-index: 4;
-margin-top: 10px;
+  float: left;
+  position: absolute;
+  z-index: 4;
+  margin-top: 10px;
 }
 
-#plus {
-float: right;
-z-index: 4;
-position: absolute;
-margin-left: 150px;
-margin-top: 10px;
+  #plus {
+  float: right;
+  z-index: 4;
+  position: absolute;
+  margin-left: 150px;
+  margin-top: 10px;
+}
+
+#lose {
+  background-color: red;
+  width:  600px;
+  height: 600px;
+  float: left;
+  z-index: 50;
+  position: absolute;
+  border-radius: 200px;
+
+}
+
+#replay{
+  background-color: black;
+  height: 300px;
+  width: 300px;
+  border-radius: 1000%;
+  margin-left: 150px;
+  z-index: 55;
+  position: absolute;
+  font-family: 'Baloo Paaji', cursive;
+  margin-top: 150px;
+  color: white;
+  font-size: 80px;
 }
